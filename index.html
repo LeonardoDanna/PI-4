@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Profit Tracker</h1>
+        <p>Sistema de Análise Financeira</p>
+    </header>
+
+    <div class="container">
+        <div class="dashboard">
+            <div class="card">
+                <h3>Saldo Total</h3>
+                <div class="value" id="totalBalance">R$ 0,00</div>
+            </div>
+            <div class="card">
+                <h3>TBD</h3>
+                <div class="value" id="monthlyProfit">R$ 0,00</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Lucro atual</h3>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label>Faturamento da Empresa</label>
+                    <input type="number" id="revenue" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label>Despesas</label>
+                    <input type="number" id="expenses" step="0.01" required>
+                </div>
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+
+        <div class="card history-card">
+            <h3>Histórico de Operações</h3>
+            <div class="history-list" id="historyList">
+                <!-- Transactions will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
